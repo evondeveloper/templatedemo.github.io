@@ -1,0 +1,209 @@
+/* #########################################################
+
+HOW TO CREATE A RESPONSIVE IMAGE SLIDER [TUTORIAL]
+
+"How to create a Responsive Image Slider [Tutorial]" was specially made for DesignModo by our friend Valeriu Timbuc.
+
+Links:
+http://vtimbuc.net
+http://designmodo.com
+http://vladimirkudinov.com
+
+######################################################### */
+
+
+
+/* Browser Resets */
+.flex-container a:active,
+.flexslider a:active,
+.flex-container a:focus,
+.flexslider a:focus  { outline: none; }
+
+.slides,
+.flex-control-nav,
+.flex-direction-nav {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+}
+
+
+.flexslider a img { outline: none; border: none; }
+
+.flexslider {
+	margin: 0;
+	padding: 0;
+}
+
+/* Hide the slides before the JS is loaded. Avoids image jumping */
+.flexslider .slides > li {
+	display: none;
+	-webkit-backface-visibility: hidden;
+}
+
+.flexslider .slides img {
+	width: 100%;
+	display: block;
+
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+}
+
+/* Clearfix for the .slides element */
+.slides:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+
+html[xmlns] .slides { display: block; }
+* html .slides { height: 1%; }
+
+
+
+/* Theme Styles */
+.flexslider {
+	position: relative;
+	zoom: 1;
+	
+
+	
+}
+
+/* Edit it if you want */
+.flex-container {
+	
+}
+
+.flexslider .slides { zoom: 1; }
+
+
+
+/* Direction Nav */
+.flex-direction-nav a {
+	display: block;
+	position: absolute;
+	margin: -17px 0 0 0;
+	padding-left: 10px;
+	padding-right: 10px;
+	width: 35px;
+	height: 35px;
+	top: 50%;
+	cursor: pointer;
+	text-indent: -9999px;
+}
+
+
+
+.flex-direction-nav .flex-next {
+	right: 10px;
+	padding-right:10px;
+	width: 40px;
+	height: 40px; 
+	background: url(../img/next.png) no-repeat center center transparent;
+	    top: 125px;
+}
+
+.flex-direction-nav .flex-prev {
+	left: 10px;
+	padding-left:10px;
+	width: 40px;
+	height: 40px; 
+	background: url(../img/prev.png) no-repeat center center transparent;
+	-webkit-border-radius: 0 3px 3px 0;
+	-moz-border-radius: 0 3px 3px 0;
+	border-radius: 0 3px 3px 0;
+	    top: 125px;
+}
+
+.flex-direction-nav .flex-next:before { background-position: -9px 0; left: 15px; }
+.flex-direction-nav .flex-prev:before { background-position: 0 0; }
+
+.flex-direction-nav .flex-next:after {
+	right: 0;
+	border-bottom: 5px solid transparent;
+	border-left: 5px solid #31611e;
+}
+
+.flex-direction-nav .flex-prev:after {
+	left: 0;
+	border-bottom: 5px solid transparent;
+	border-right: 5px solid #31611e;
+}
+
+
+
+/* Control Nav */
+.flexslider .flex-control-nav {
+	position: absolute;
+	width: 100%;
+	bottom: 2%;
+	text-align:right;
+	padding: 13px 10px;
+	line-height: 20px;
+
+}
+.flex-control-nav li:nth-child(1)
+{
+	
+}
+.flex-control-nav li {
+	display: inline-block;
+	zoom: 1;
+}
+
+.flex-control-paging li a {
+	display: block;
+	cursor: pointer;
+	color:#fff;
+	width: 23px;
+	height: 23px;
+	margin: 0 3px;
+	background: #6b685e;
+	text-align: center;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	border-bottom:2px solid #ccc; 
+}
+
+.flex-control-paging li a.flex-active {
+	width: 26px;
+	height: 26px;
+	line-height: 26px;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffc800+0,ff8c00+100 */
+	background: #ffc800; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffc800 0%, #ff8c00 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffc800), color-stop(100%,#ff8c00)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffc800 0%,#ff8c00 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffc800 0%,#ff8c00 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffc800 0%,#ff8c00 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ffc800 0%,#ff8c00 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffc800', endColorstr='#ff8c00',GradientType=0 ); /* IE6-9 */
+}
+
+
+
+/* Captions */
+.flexslider .slides p {
+	display: block;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	padding:13px 170px 13px 10px;
+	margin: 0;
+	bottom: 0%;
+	width: 100%;
+	height: 60px;
+	font-size: 12px;
+	line-height: 18px;
+	color: white;
+	background-color: #000;
+	background: rgba(0,0,0, 1);
+
+}
